@@ -12,6 +12,17 @@ public class Main {
     public static void main(String[] args) {
         dogExample();
         birdExample();
+        canFlyExample();
+    }
+
+    private static void canFlyExample() {
+        CanFly pigeon = new Pigeon("Henry", 5, 3);
+        CanFly seagull = new Seagull("Larry", 10, 2);
+
+        List<CanFly> birdsThatCanFly = List.of(pigeon, seagull);
+        for (CanFly bird : birdsThatCanFly) {
+            bird.fly();
+        }
     }
 
     private static void birdExample() {
